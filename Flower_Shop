@@ -1,0 +1,18 @@
+import math
+
+m = int(input()) * 3.25
+z = int(input()) * 4
+r = int(input()) * 3.50
+c = int(input()) * 8
+gift = float(input())
+
+total = m + z + r + c
+fee = (m + z + r + c) * 0.05
+after_fee = total - fee
+
+if after_fee >= gift:
+    money_left = after_fee - gift
+    print(f"She is left with {math.floor(money_left)} leva.")
+else:
+    money_left = gift - after_fee
+    print(f"She will have to borrow {math.ceil(money_left)} leva.")
