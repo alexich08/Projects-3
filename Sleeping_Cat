@@ -1,0 +1,17 @@
+rest_days = int(input())
+working_days = 365 - rest_days
+playing_time = working_days * 63 + rest_days * 127
+minutes_in_year = 30000
+
+if minutes_in_year > playing_time:
+    time_left = minutes_in_year - playing_time
+    hours = time_left // 60
+    minutes = time_left % 60
+    print("Tom sleeps well")
+    print(f"{hours} hours and {minutes} minutes less for play")
+if minutes_in_year <= playing_time:
+    time_left = playing_time - minutes_in_year
+    hours = time_left // 60
+    minutes = time_left % 60
+    print("Tom will run away")
+    print(f"{hours} hours and {minutes} minutes more for play")
