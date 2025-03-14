@@ -1,0 +1,18 @@
+pool_capacity = int(input())
+liters_hour_1 = int(input())
+liters_hour_2 = int(input())
+workman_absence = float(input())
+
+total_first = workman_absence * liters_hour_1
+total_second = workman_absence * liters_hour_2
+
+total = total_first + total_second
+
+if total <= pool_capacity:
+    percentage = (total / pool_capacity) * 100
+    pipe_1 = (total_first / total) * 100
+    pipe_2 = (total_second / total) * 100
+    print(f"The pool is {percentage:.2f}% full. Pipe 1: {pipe_1:.2f}%. Pipe 2: {pipe_2:.2f}%.")
+if total > pool_capacity:
+    pool = total - pool_capacity
+    print(f"For {workman_absence:.2f} hours the pool overflows with {pool:.2f} liters.")
