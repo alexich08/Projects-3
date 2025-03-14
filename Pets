@@ -1,0 +1,20 @@
+import math
+
+days_absence = int(input())
+food_kilo = int(input())
+dog_food = float(input())
+cat_food = float(input())
+turtle_food = float(input())
+
+total_dog = days_absence * dog_food
+total_cat = days_absence * cat_food
+total_turtle = (days_absence * turtle_food) / 1000
+
+total_food = total_dog + total_cat + total_turtle
+
+if food_kilo >= total_food:
+    food_left = food_kilo - total_food
+    print(f"{math.floor(food_left)} kilos of food left.")
+elif food_kilo < total_food:
+    food_needed = total_food - food_kilo
+    print(f"{math.ceil(food_needed)} more kilos of food are needed.")
