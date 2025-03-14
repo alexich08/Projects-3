@@ -1,0 +1,55 @@
+fuel_type = input()
+fuel_quantity = float(input())
+has_card = input()
+price = 0
+gasoline_price = fuel_quantity * 2.22
+diesel_price = fuel_quantity * 2.33
+gas_price = fuel_quantity * 0.93
+
+if fuel_type == "Gasoline" and has_card == "Yes":
+    price = 2.04 * fuel_quantity
+    if 20 <= fuel_quantity <= 25:
+        price = (2.04 * fuel_quantity) - 0.08 * (2.04 * fuel_quantity)
+    elif fuel_quantity > 25:
+        price = (2.04 * fuel_quantity) - 0.10 * (2.04 * fuel_quantity)
+
+
+elif fuel_type == "Gasoline" and has_card == "No":
+    price = 2.22 * fuel_quantity
+    if 20 <= fuel_quantity <= 25:
+        price = (2.22 * fuel_quantity) - 0.08 * (2.22 * fuel_quantity)
+    elif fuel_quantity > 25:
+        price = (2.22 * fuel_quantity) - 0.10 * (2.22 * fuel_quantity)
+
+
+elif fuel_type == "Diesel" and has_card == "Yes":
+    price = 2.21 * fuel_quantity
+    if 20 <= fuel_quantity <= 25:
+        price = (2.21 * fuel_quantity) - 0.08 * (2.21 * fuel_quantity)
+    elif fuel_quantity > 25:
+        price = (2.21 * fuel_quantity) - 0.10 * (2.21 * fuel_quantity)
+
+elif fuel_type == "Diesel" and has_card == "No":
+    price = 2.33 * fuel_quantity
+    if 20 <= fuel_quantity <= 25:
+        price = (2.33 * fuel_quantity) - 0.08 * (2.33 * fuel_quantity)
+    elif fuel_quantity > 25:
+        price = (2.33 * fuel_quantity) - 0.10 * (2.33 * fuel_quantity)
+
+
+elif fuel_type == "Gas" and has_card == "Yes":
+    price = 0.85 * fuel_quantity
+    if 20 <= fuel_quantity <= 25:
+        price = (0.85 * fuel_quantity) - 0.08 * (0.85 * fuel_quantity)
+    elif fuel_quantity > 25:
+        price = (0.85 * fuel_quantity) - 0.10 * (0.85 * fuel_quantity)
+
+
+elif fuel_type == "Gas" and has_card == "No":
+    price = 0.93 * fuel_quantity
+    if 20 <= fuel_quantity <= 25:
+        price = (0.93 * fuel_quantity) - 0.08 * (0.93 * fuel_quantity)
+    elif fuel_quantity > 25:
+        price = (0.93 * fuel_quantity) - 0.10 * (0.93 * fuel_quantity)
+
+print(f"{price:.2f} lv.")
