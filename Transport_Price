@@ -1,0 +1,14 @@
+kilometers = int(input())
+time_of_the_day = str(input())
+travel_cost = ""
+
+if kilometers < 20 and time_of_the_day == "day":
+    travel_cost = 0.70 + kilometers * 0.79
+elif kilometers < 20 and time_of_the_day == "night":
+    travel_cost = 0.70 + kilometers * 0.90
+elif 20 <= kilometers < 100:
+    travel_cost = 0.09 * kilometers
+elif kilometers >= 100:
+    travel_cost = 0.06 * kilometers
+
+print(f"{travel_cost:.2f}")
